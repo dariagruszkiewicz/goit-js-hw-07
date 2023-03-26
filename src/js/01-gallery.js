@@ -31,5 +31,5 @@ galeryListEl.addEventListener("click", (e) => {
 	`);
 	console.log(e.target.dataset.source);
 	instance.show();
-	instance.preventDefault();
+	e.preventDefault();
 });
