@@ -20,3 +20,12 @@ galleryItems.forEach(function (item, i) {
 	newImg.setAttribute("src", imgPreview[i]);
 	newImg.setAttribute("alt", imgDescription[i]);
 });
+
+galeryListEl.addEventListener("click", (e) => {
+	let gallery = new SimpleLightbox(".gallery a", {
+		captionsData: "alt",
+		captionsDelay: 250,
+	});
+	e.preventDefault();
+	console.log(gallery);
+});

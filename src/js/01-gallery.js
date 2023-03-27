@@ -32,4 +32,10 @@ galeryListEl.addEventListener("click", (e) => {
 	console.log(e.target.dataset.source);
 	instance.show();
 	e.preventDefault();
+
+	galeryListEl.addEventListener("keydown", (e) => {
+		if (e.key === "Escape") {
+			instance.close();
+		}
+	});
 });
