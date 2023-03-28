@@ -21,11 +21,12 @@ galleryItems.forEach(function (item, i) {
 	newImg.setAttribute("alt", imgDescription[i]);
 });
 
+let gallery = new SimpleLightbox(".gallery a", {
+	captionsData: "alt",
+	captionsDelay: 250,
+});
+gallery.on("show.simplelightbox");
+
 galeryListEl.addEventListener("click", (e) => {
-	let gallery = new SimpleLightbox(".gallery a", {
-		captionsData: "alt",
-		captionsDelay: 250,
-	});
 	e.preventDefault();
-	console.log(gallery);
 });
